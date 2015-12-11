@@ -65,6 +65,7 @@ public class SdDatabaseCsv_SampleActivity extends Activity implements OnClickLis
                 //Create myListView
                 createMyListView();
 
+
                 //mTextView.setText(table+":"+condition+"\n"+data);
                 break;
 
