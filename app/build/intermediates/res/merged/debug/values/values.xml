@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h1">25sp</dimen>
+    <string name="app_name">SD DB to CSV sample</string>
+    <string name="hello">Hello World, SD database CSV</string>
+    <string name="keyword_defaultCondition">Enter condition as BIZDATE=\'20130701\'</string>
+    <string name="keyword_defaultTablename">Enter table as CSS012</string>
+</resources>

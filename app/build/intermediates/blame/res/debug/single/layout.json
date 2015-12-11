@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/masterUNG/MyWorkspace/Studio_V100/SDDataBaseCsv_Sample/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/masterUNG/MyWorkspace/Studio_V100/SDDataBaseCsv_Sample/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/masterUNG/MyWorkspace/Studio_V100/PrintItem/app/build/intermediates/res/merged/debug/layout/my_listview.xml",
+        "source": "/Users/masterUNG/MyWorkspace/Studio_V100/PrintItem/app/src/main/res/layout/my_listview.xml"
+    },
+    {
+        "merged": "/Users/masterUNG/MyWorkspace/Studio_V100/PrintItem/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/masterUNG/MyWorkspace/Studio_V100/PrintItem/app/src/main/res/layout/main.xml"
+    }
+]
