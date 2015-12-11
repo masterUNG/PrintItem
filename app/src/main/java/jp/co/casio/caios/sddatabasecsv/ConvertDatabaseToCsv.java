@@ -1,12 +1,13 @@
 package jp.co.casio.caios.sddatabasecsv;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
+import android.util.Log;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 
 /**
@@ -68,6 +69,12 @@ public class ConvertDatabaseToCsv {
 		//
 		// Read data and convert to CSV
 		//
+
+		//*******************************************************************************
+
+		myCursor(cursor);
+
+		//*******************************************************************************
 		StringBuilder csvData = new StringBuilder(sql+"\n");
 		cursor.moveToFirst();
 		final int column = cursor.getColumnCount();
@@ -118,6 +125,20 @@ public class ConvertDatabaseToCsv {
 		
 		return cvsDataString;
 	}
-	
+
+	private void myCursor(Cursor cursor) {
+
+		String[] itemNameStrings = new String[cursor.getCount()];
+		cursor.moveToFirst();
+
+		for (int i=0;i<cursor.getCount();i++) {
+
+			Log.d("v100", "itmeName(" + Integer.toString(i) + ") ==> " + cursor.getString(cursor.getColumnIndex("ITEMNAME")));
+			cursor.moveToNext();
+
+		}	// for
+
+	}	// myCursor
+
 
 }

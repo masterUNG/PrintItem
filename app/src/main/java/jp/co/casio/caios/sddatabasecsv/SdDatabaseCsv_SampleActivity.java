@@ -62,7 +62,7 @@ public class SdDatabaseCsv_SampleActivity extends Activity implements OnClickLis
                 String data = convert.convertDatabaseToCsv(dbName, table, condition, csvName);
 
                 //Create myListView
-                createMyListView(dbName, table, condition);
+                createMyListView();
 
                 //mTextView.setText(table+":"+condition+"\n"+data);
                 break;
@@ -73,33 +73,9 @@ public class SdDatabaseCsv_SampleActivity extends Activity implements OnClickLis
         }
     }    // onClick
 
-    private void createMyListView(String strDatabaseName, String strTableName, String strWhereName) {
-
-        //Get Data from SQLite
-        String[] itemNameStrings, qtyStrings, amtStrings;
+    private void createMyListView() {
 
 
-        //Tester
-        itemNameStrings = new String[4];
-        itemNameStrings[0] = "Name1";
-        itemNameStrings[1] = "Name2";
-        itemNameStrings[2] = "Name3";
-        itemNameStrings[3] = "Name4";
-
-        qtyStrings = new String[4];
-        qtyStrings[0] = "1";
-        qtyStrings[1] = "2";
-        qtyStrings[2] = "3";
-        qtyStrings[3] = "4";
-
-        amtStrings = new String[4];
-        amtStrings[0] = "a1";
-        amtStrings[1] = "a2";
-        amtStrings[2] = "a3";
-        amtStrings[3] = "a4";
-
-        MyAdapter objMyAdapter = new MyAdapter(SdDatabaseCsv_SampleActivity.this, itemNameStrings, qtyStrings, amtStrings);
-        myListView.setAdapter(objMyAdapter);
 
     }    // createMyListView
 
