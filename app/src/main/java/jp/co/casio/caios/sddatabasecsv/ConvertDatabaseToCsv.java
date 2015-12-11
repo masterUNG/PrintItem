@@ -3,7 +3,6 @@ package jp.co.casio.caios.sddatabasecsv;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,6 +17,7 @@ public class ConvertDatabaseToCsv {
 	
 	private final String DBFOLDER  = "/jp.co.casio.caios.framework.database/databases";
 	private final String CSVFOLDER = "/csv";
+	private String[] itemNameStrings, qtyStrings, amtStrings;
 	
 	/**
 	 * Read SD database, convert to CSV and write to SD
@@ -128,17 +128,29 @@ public class ConvertDatabaseToCsv {
 
 	private void myCursor(Cursor cursor) {
 
-		String[] itemNameStrings = new String[cursor.getCount()];
+		itemNameStrings = new String[cursor.getCount()];
 		cursor.moveToFirst();
 
 		for (int i=0;i<cursor.getCount();i++) {
 
-			Log.d("v100", "itmeName(" + Integer.toString(i) + ") ==> " + cursor.getString(cursor.getColumnIndex("ITEMNAME")));
+			itemNameStrings[i] = cursor.getString(cursor.getColumnIndex("TIEMNAME"));
+
 			cursor.moveToNext();
 
 		}	// for
 
+
 	}	// myCursor
 
+	public String[] shareArray(int intColumn) {
 
-}
+		String[] strResult = new String[itemNameStrings.length];
+		for (int i=0;i<itemNameStrings.length;i++) {
+			strResult[i] = itemNameStrings[i];
+		}
+
+		return strResult;
+	}
+
+
+}	// Main Class

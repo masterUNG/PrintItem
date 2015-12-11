@@ -2,6 +2,7 @@ package jp.co.casio.caios.sddatabasecsv;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -75,9 +76,18 @@ public class SdDatabaseCsv_SampleActivity extends Activity implements OnClickLis
 
     private void createMyListView() {
 
+        try {
 
+            ConvertDatabaseToCsv objConvertDatabaseToCsv = new ConvertDatabaseToCsv();
+            String[] itemNameStrings = objConvertDatabaseToCsv.shareArray(1);
+
+            Log.d("v100", "สิ่งที่ได้รับจาก Array ==> " + Integer.toString(itemNameStrings.length));
+
+        } catch (Exception e) {
+            Log.d("v100", "Error ==> " + e.toString());
+        }
 
     }    // createMyListView
 
 
-}
+}   // Main Class
